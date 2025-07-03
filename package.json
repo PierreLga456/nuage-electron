@@ -1,0 +1,27 @@
+{
+  "name": "nuage",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --mac --arm64"
+  },
+  "devDependencies": {
+    "electron": "^28.1.0",
+    "electron-builder": "^24.6.0"
+  },
+  "build": {
+    "appId": "fr.lann.nuage",
+    "productName": "Nuage",
+    "mac": {
+      "icon": "assets/Nuage.icns",
+      "target": "dmg",
+      "category": "public.app-category.productivity",
+      "extendInfo": {
+        "NSCameraUsageDescription": "Utilisé pour les appels vidéo Nextcloud Talk",
+        "NSMicrophoneUsageDescription": "Utilisé pour les appels audio Nextcloud Talk",
+        "NSCameraUseContinuityCameraDeviceType": true
+      }
+    }
+  }
+}
