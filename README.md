@@ -1,4 +1,7 @@
-# Nuage – App Electron Nextcloud
+# Nuage – App Electron Nextcloud (version originale pour architecture Apple Silicon)
+
+⚠️ Pour une version où l'on peut choisir l'url de son instance et le type d'architecture (Intel, Silicon, app universelle) voir la branche https://github.com/PierreLga456/nuage-electron/tree/multi-arch-buid
+
 
 App Electron macOS native encapsulant l'instance Nextcloud personnelle :  
 👉 https://nuage.lann.es
