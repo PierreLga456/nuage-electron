@@ -15,7 +15,7 @@ function createWindow() {
     }
   });
 
-  mainWindow.loadURL('https://nuage.lann.es');
+  mainWindow.loadURL(appUrl);
 
   // Inject spinner on navigation
   mainWindow.webContents.on('did-start-loading', () => {
@@ -56,6 +56,28 @@ function createWindow() {
       if (s) s.remove();
     `).catch(() => {});
   });
+}
+
+const fs = require('fs');
+const path = require('path');
+
+// URL par défaut
+let appUrl = 'https://nuage.lann.es';
+
+// Lecture du fichier config.json s'il existe
+const configPath = path.join(__dirname, 'config.json');
+if (fs.existsSync(configPath)) {
+  try {
+    const config = JSON.parse(fs.readFileSync(configPath, 'utf8'));
+    if (typeof config.url === 'string') {
+      appUrl = config.url;
+      console.log(`🌐 Instance personnalisée : ${appUrl}`);
+    } else {
+      console.warn('🔧 config.json trouvé mais `url` invalide, fallback sur valeur par défaut');
+    }
+  } catch (err) {
+    console.warn('❌ Erreur de lecture config.json, fallback sur valeur par défaut');
+  }
 }
 
 app.whenReady().then(createWindow);
