@@ -1,10 +1,17 @@
 {
   "name": "nuage",
   "version": "1.0.0",
-  "main": "main.js",
+  "main": "main.js",  
   "scripts": {
     "start": "electron .",
-    "pack": "electron-builder --mac --arm64"
+    "pack": "npm run pack:arm64",
+    "pack:arm64": "electron-builder --mac --arm64",
+    "pack:x64": "electron-builder --mac --x64",
+    "pack:universal": "electron-builder --mac --universal"
+  },
+  "devDependencies": {
+    "electron": "^30.0.0",               // ou latest
+    "electron-builder": "^24.6.0"
   },
   "devDependencies": {
     "electron": "^28.1.0",
