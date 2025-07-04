@@ -1,7 +1,6 @@
 # Nuage – App Electron Nextcloud
 
-App Electron macOS native encapsulant l'instance Nextcloud personnelle :  
-👉 https://nuage.lann.es
+App Electron macOS native encapsulant une instance Nextcloud
 
 ---
 
