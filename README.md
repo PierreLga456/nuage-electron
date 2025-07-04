@@ -14,6 +14,16 @@ App Electron macOS native encapsulant l'instance Nextcloud personnelle :
 - Optimisé pour **Apple Silicon (M1/M2/M3/M4)**, sans Rosetta
 - Léger, sans surcouche inutile, 100 % local
 
+
+## 🔧 Personnalisation de l'instance Nextcloud
+
+Ajoutez un fichier config.json à la racine du projet pour utiliser une URL personnalisée :
+
+```
+{
+  "url": "https://autre-instance.example.com"
+}
+```
 ---
 
 ## 🧪 Installation locale (dev)
